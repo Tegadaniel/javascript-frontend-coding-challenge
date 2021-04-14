@@ -51,8 +51,7 @@ Autocomplete.prototype.createResultsEl = function(results){
     el.addEventListener('click', (event) => {
       const { onSelect } = this.options;
       console.log(onSelect);
-      this.el = this.createQueryInputEl().value;
-      console.log(this.createQueryInputEl().value)
+      console.log(this.createQueryInputEl())
       if (typeof onSelect === 'function') onSelect(result.value);
     });
     fragment.appendChild(el);
